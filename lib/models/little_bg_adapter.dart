@@ -1,5 +1,5 @@
 import 'package:hive/hive.dart';
-import 'package:myapp/models/little_bg.dart';
+import 'package:santaslist/models/little_bg.dart';
 
 @HiveType(typeId: 0) // Assign a unique type ID
 class LittleBGAdapter extends TypeAdapter<LittleBG> {

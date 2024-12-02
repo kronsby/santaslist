@@ -1,6 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:myapp/models/little_bg.dart';
-import 'package:myapp/models/little_bg_adapter.dart';
+import 'package:santaslist/models/little_bg.dart';
 
 class LittleBgRepository {
   late Box<LittleBG> _littleBGBox;

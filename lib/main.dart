@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:myapp/models/little_bg_adapter.dart';
-import 'package:myapp/models/little_bg.dart';
-import 'package:myapp/repository/little_bg_repo.dart';
-import 'repository/little_bg_repo.dart';
+import 'package:santaslist/models/little_bg_adapter.dart';
+import 'package:santaslist/models/little_bg.dart';
+import 'package:santaslist/repository/little_bg_repo.dart';
 
 void main() async {
   // Initialize hive
   await Hive.initFlutter();
   Hive.registerAdapter(LittleBGAdapter());
 
-  runApp(const MyApp());
+  runApp(const SantasListApplication());
 }
 
 // We do this
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SantasListApplication extends StatelessWidget {
+  const SantasListApplication({super.key});
 
   @override
   Widget build(BuildContext context) => MaterialApp(
@@ -48,7 +47,6 @@ class _MyHomePageState extends State<MyHomePage> {
     _loadChildren();
   }
 
-// 
   Future<void> _initRepository() async {
     await repository.init();
   }
